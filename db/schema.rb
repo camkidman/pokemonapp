@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130921155712) do
+ActiveRecord::Schema.define(:version => 20130921164145) do
 
   create_table "attacks", :force => true do |t|
     t.string   "name"
@@ -40,6 +40,20 @@ ActiveRecord::Schema.define(:version => 20130921155712) do
     t.datetime "updated_at",   :null => false
   end
 
+  create_table "cards_decks", :id => false, :force => true do |t|
+    t.integer "card_id"
+    t.integer "deck_id"
+  end
+
+  add_index "cards_decks", ["card_id", "deck_id"], :name => "index_cards_decks_on_card_id_and_deck_id"
+
+  create_table "cards_types", :id => false, :force => true do |t|
+    t.integer "card_id"
+    t.integer "type_id"
+  end
+
+  add_index "cards_types", ["card_id", "type_id"], :name => "index_cards_types_on_card_id_and_type_id"
+
   create_table "decks", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
@@ -67,6 +81,7 @@ ActiveRecord::Schema.define(:version => 20130921155712) do
     t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "deck_id"
   end
 
 end
