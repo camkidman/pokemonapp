@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Hp:</b>
+  <%= @card.hp %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @card.name %>
+</p>
+
+<p>
+  <b>Weakness:</b>
+  <%= @card.weakness %>
+</p>
+
+<p>
+  <b>Ability:</b>
+  <%= @card.ability %>
+</p>
+
+<p>
+  <b>Flavor text:</b>
+  <%= @card.flavor_text %>
+</p>
+
+<p>
+  <b>Resistance:</b>
+  <%= @card.resistance %>
+</p>
+
+<p>
+  <b>Retreat:</b>
+  <%= @card.retreat %>
+</p>
+
+<p>
+  <b>Stage:</b>
+  <%= @card.stage %>
+</p>
+
+<p>
+  <b>Evolved from:</b>
+  <%= @card.evolved_from %>
+</p>
+
+<p>
+  <b>Set no:</b>
+  <%= @card.set_no %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @card.height %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%= @card.weight %>
+</p>
+
+<p>
+  <b>Miniflavor:</b>
+  <%= @card.miniflavor %>
+</p>
+
+
+<%= link_to 'Edit', edit_card_path(@card) %> |
+<%= link_to 'Back', cards_path %>

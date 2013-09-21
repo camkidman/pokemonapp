@@ -1,0 +1,47 @@
+<h1>Listing cards</h1>
+
+<table>
+  <tr>
+    <th>Hp</th>
+    <th>Name</th>
+    <th>Weakness</th>
+    <th>Ability</th>
+    <th>Flavor text</th>
+    <th>Resistance</th>
+    <th>Retreat</th>
+    <th>Stage</th>
+    <th>Evolved from</th>
+    <th>Set no</th>
+    <th>Height</th>
+    <th>Weight</th>
+    <th>Miniflavor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cards.each do |card| %>
+  <tr>
+    <td><%= card.hp %></td>
+    <td><%= card.name %></td>
+    <td><%= card.weakness %></td>
+    <td><%= card.ability %></td>
+    <td><%= card.flavor_text %></td>
+    <td><%= card.resistance %></td>
+    <td><%= card.retreat %></td>
+    <td><%= card.stage %></td>
+    <td><%= card.evolved_from %></td>
+    <td><%= card.set_no %></td>
+    <td><%= card.height %></td>
+    <td><%= card.weight %></td>
+    <td><%= card.miniflavor %></td>
+    <td><%= link_to 'Show', card %></td>
+    <td><%= link_to 'Edit', edit_card_path(card) %></td>
+    <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Card', new_card_path %>

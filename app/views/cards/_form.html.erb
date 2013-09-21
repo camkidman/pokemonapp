@@ -1,0 +1,69 @@
+<%= form_for(@card) do |f| %>
+  <% if @card.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@card.errors.count, "error") %> prohibited this card from being saved:</h2>
+
+      <ul>
+      <% @card.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hp %><br />
+    <%= f.number_field :hp %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :weakness %><br />
+    <%= f.text_field :weakness %>
+  </div>
+  <div class="field">
+    <%= f.label :ability %><br />
+    <%= f.text_field :ability %>
+  </div>
+  <div class="field">
+    <%= f.label :flavor_text %><br />
+    <%= f.text_field :flavor_text %>
+  </div>
+  <div class="field">
+    <%= f.label :resistance %><br />
+    <%= f.text_field :resistance %>
+  </div>
+  <div class="field">
+    <%= f.label :retreat %><br />
+    <%= f.text_field :retreat %>
+  </div>
+  <div class="field">
+    <%= f.label :stage %><br />
+    <%= f.number_field :stage %>
+  </div>
+  <div class="field">
+    <%= f.label :evolved_from %><br />
+    <%= f.text_field :evolved_from %>
+  </div>
+  <div class="field">
+    <%= f.label :set_no %><br />
+    <%= f.text_field :set_no %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br />
+    <%= f.text_field :height %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br />
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :miniflavor %><br />
+    <%= f.text_field :miniflavor %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
