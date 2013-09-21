@@ -1,4 +1,19 @@
 Pokemonapp::Application.routes.draw do
+  resources :decks
+
+
+  resources :expansions
+
+
+  resources :statuses
+
+
+  resources :attacks
+
+
+  resources :users
+
+
   resources :cards
 
 

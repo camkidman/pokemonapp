@@ -10,9 +10,9 @@ class CreateCards < ActiveRecord::Migration
       t.string :retreat
       t.integer :stage
       t.string :evolved_from
-      t.int :set_no
-      t.int :height
-      t.int :weight
+      t.integer :set_no
+      t.integer :height
+      t.integer :weight
       t.string :miniflavor
 
       t.timestamps
